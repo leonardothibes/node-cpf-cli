@@ -1,24 +1,44 @@
-# NPM Skeleton [![npm](http://img.shields.io/npm/v/[nome-do-projeto].svg)](https://www.npmjs.com/package/[nome-do-projeto]) ![Downloads](https://img.shields.io/npm/dm/[nome-do-projeto].svg) [![Build Status](https://secure.travis-ci.org/leonardothibes/[nome-do-projeto].png)](http://travis-ci.org/leonardothibes/[nome-do-projeto]) [![Package Quality](http://npm.packagequality.com/shield/[nome-do-projeto].svg)](http://packagequality.com/#?package=[nome-do-projeto]) [![License](https://img.shields.io/npm/l/[nome-do-projeto].svg)](LICENSE)
+# CPF-CLI [![npm](http://img.shields.io/npm/v/node-cpf-cli.svg)](https://www.npmjs.com/package/node-cpf-cli) ![Downloads](https://img.shields.io/npm/dm/node-cpf-cli.svg) [![Build Status](https://secure.travis-ci.org/leonardothibes/node-cpf-cli.png)](http://travis-ci.org/leonardothibes/node-cpf-cli) [![Package Quality](http://npm.packagequality.com/shield/node-cpf-cli.svg)](http://packagequality.com/#?package=node-cpf-cli) [![License](https://img.shields.io/npm/l/node-cpf-cli.svg)](LICENSE)
 
-Aqui vai uma pequena descrição do projeto, falando um pouco sobre seu propósito e os problemas que ele se propõe a resolver.
+Gerador e validador de CPF via linha de comando.
 
 Installation
 ------------
 
 ```bash
-npm install [nome-do-projeto] --save
+npm install node-cpf-cli -g
 ```
 
 Examples
 --------
 
-* [Some function](#some-function)
+* [Validate](#validate)
+* [Generate](#generate)
 
-Some function
--------------
+Validate
+--------
 
-```js
-// Aqui vão os exemplos de uso.
+```bash
+cpf validate 77714774614
+```
+
+or 
+
+```bash
+cpf validate 777.147.746-14
+```
+
+Generate
+--------
+
+```bash
+cpf generate # returns '77714774614'
+```
+
+or 
+
+```bash
+cpf generate -m # returns '777.147.746-14'
 ```
 
 Test and development
