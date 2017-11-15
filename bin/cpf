@@ -2,7 +2,13 @@
 
 'use strict';
 
-const argv = require('node-argv'),
-      args = argv(process.argv.slice(2));
+const argv  = require('node-argv'),
+      ctrl  = require('../lib/controller'),
+      error = require('../lib/errorHandler');
 
-console.log(args);
+try {
+    const args = argv(process.argv.slice(2));
+    ctrl.handle(args);
+} catch (e) {
+    error.print(e);
+}
