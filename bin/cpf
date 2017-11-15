@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const argv = require('node-argv'),
+      args = argv(process.argv.slice(2));
+
+console.log(args);
