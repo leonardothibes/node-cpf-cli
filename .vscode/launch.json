@@ -5,14 +5,53 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Validate no mask",
-            "type": "node",
-            "request": "launch",
-            "program": "${workspaceFolder}/bin/cpf",
-            "args": [
-              "validate",
-              "15736318768"
-            ]
+          "name": "Validate no mask",
+          "type": "node",
+          "request": "launch",
+          "program": "${workspaceFolder}/bin/cpf",
+          "args": [
+            "validate",
+            "15736318768"
+          ]
+        },
+        {
+          "name": "Validate with mask",
+          "type": "node",
+          "request": "launch",
+          "program": "${workspaceFolder}/bin/cpf",
+          "args": [
+            "validate",
+            "157.363.187-68"
+          ]
+        },
+        {
+          "name": "Generate no mask",
+          "type": "node",
+          "request": "launch",
+          "program": "${workspaceFolder}/bin/cpf",
+          "args": [
+            "generate"
+          ]
+        },
+        {
+          "name": "Generate with mask 1",
+          "type": "node",
+          "request": "launch",
+          "program": "${workspaceFolder}/bin/cpf",
+          "args": [
+            "generate",
+            "-m"
+          ]
+        },
+        {
+          "name": "Generate with mask 2",
+          "type": "node",
+          "request": "launch",
+          "program": "${workspaceFolder}/bin/cpf",
+          "args": [
+            "generate",
+            "--mask"
+          ]
         }
     ]
 }
