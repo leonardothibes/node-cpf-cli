@@ -27,24 +27,24 @@ describe('Controller', function()
 
             done();
         });
+    });
 
-        it('Command Not Found', function(done)
-        {
-            try {
-                const commands = ['invalid'];
-                controller.handle({
-                    options : {},
-                    commands: commands,
-                    input   : commands,
-                });
-            } catch (e) {
-                assert
-                    .object(e)
-                    .hasProperty('code', 'NOT_FOUND')
-                    .hasProperty('message', 'Comando não encontrado')
-                ;
-                done();
-            }
-        });
+    it('Command Not Found', function(done)
+    {
+        try {
+            const commands = ['invalid'];
+            controller.handle({
+                options : {},
+                commands: commands,
+                input   : commands,
+            });
+        } catch (e) {
+            assert
+                .object(e)
+                .hasProperty('code', 'NOT_FOUND')
+                .hasProperty('message', 'Comando não encontrado')
+            ;
+            done();
+        }
     });
 });
