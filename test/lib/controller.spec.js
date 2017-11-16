@@ -29,6 +29,17 @@ describe('Controller', function()
         });
     });
 
+    it('Command Default', function(done)
+    {
+        controller.handle({
+            options : {},
+            commands: [],
+            input   : commands,
+        });
+
+        done();
+    });
+
     it('Command Not Found', function(done)
     {
         try {
