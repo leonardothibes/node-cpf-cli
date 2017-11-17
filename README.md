@@ -164,6 +164,8 @@ Uso: cpf [CPF para validar]|<command> [options]
 
   -m               Inclui máscara na geração de CPFs
   -q               Define a quantidade de CPFs a serem gerados
+  -v|--version     Exibe o número da versão
+  -h|--help        Exibe esta mensagem de help
 
 Para maiores informações: https://www.npmjs.com/package/node-cpf-cli
 ```
