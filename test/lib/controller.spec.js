@@ -6,22 +6,6 @@ const controller = require('../../lib/controller'),
 
 describe('Controller', function()
 {
-    it('Help Command', function(done)
-    {
-        console.info = function(output)
-        {
-            assert.string(output).isNotEmpty();
-        };
-
-        controller.handle({
-            options : {h: true},
-            commands: [],
-            input   : [],
-        });
-
-        done();
-    });
-
     it('Generate UnMasked', function(done)
     {
         console.info = function(output)
@@ -82,6 +66,105 @@ describe('Controller', function()
         controller.handle({
             options : {},
             commands: [input],
+            input   : [],
+        });
+
+        done();
+    });
+
+    it('Version Command -v', function(done)
+    {
+        console.info = function(output)
+        {
+            const packInfo = require('../../package.json')
+            assert.string(output).isEqualTo(packInfo.version);
+        };
+
+        controller.handle({
+            options : {v: true},
+            commands: [],
+            input   : [],
+        });
+
+        done();
+    });
+
+    it('Version Command --version', function(done)
+    {
+        console.info = function(output)
+        {
+            const packInfo = require('../../package.json')
+            assert.string(output).isEqualTo(packInfo.version);
+        };
+
+        controller.handle({
+            options : {version: true},
+            commands: [],
+            input   : [],
+        });
+
+        done();
+    });
+
+    it('Version Command version', function(done)
+    {
+        console.info = function(output)
+        {
+            const packInfo = require('../../package.json')
+            assert.string(output).isEqualTo(packInfo.version);
+        };
+
+        controller.handle({
+            options : {},
+            commands: ['version'],
+            input   : [],
+        });
+
+        done();
+    });
+
+    it('Help Command -h', function(done)
+    {
+        console.info = function(output)
+        {
+            assert.string(output).isNotEmpty();
+        };
+
+        controller.handle({
+            options : {h: true},
+            commands: [],
+            input   : [],
+        });
+
+        done();
+    });
+
+    it('Help Command --help', function(done)
+    {
+        console.info = function(output)
+        {
+            assert.string(output).isNotEmpty();
+        };
+
+        controller.handle({
+            options : {help: true},
+            commands: [],
+            input   : [],
+        });
+
+        done();
+    });
+
+    it('Help Command help', function(done)
+    {
+        console.info = function(output)
+        {
+            assert.string(output).isNotEmpty();
+        };
+
+        controller.handle({
+            options : {},
+            commands: ['help'],
             input   : [],
         });
 
