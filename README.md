@@ -22,6 +22,8 @@ Examples
     * [Gerando um com mascara](#gerando-um-com-mascara)
     * [Gerando multiplos sem mascara](#gerando-multiplos-sem-mascara)
     * [Gerando multiplos com mascara](#gerando-multiplos-com-mascara)
+* [Help](#help)
+* [Version](#version)
 
 Validate
 --------
@@ -136,6 +138,56 @@ A saída do comando será:
 720.395.416-16
 197.260.534-80
 164.823.570-08
+```
+
+Help
+----
+
+Exibe a mensagem de help.
+
+```bash
+cpf -h
+```
+```bash
+cpf --help
+```
+
+```bash
+cpf help
+```
+
+A saída do comando será:
+
+```bash
+Gerador e validador de CPF via linha de comando (node-cpf-cli - 1.0.0)
+Uso: cpf [CPF para validar]|<command> [options]
+
+  -m               Inclui máscara na geração de CPFs
+  -q               Define a quantidade de CPFs a serem gerados
+
+Para maiores informações: https://www.npmjs.com/package/node-cpf-cli
+```
+
+Version
+-------
+
+Exibe a versão do utilitário.
+
+```bash
+cpf -v
+```
+```bash
+cpf --version
+```
+
+```bash
+cpf version
+```
+
+A saída do comando será:
+
+```bash
+1.0.0
 ```
 
 Test and development
