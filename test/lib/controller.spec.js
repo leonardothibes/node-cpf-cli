@@ -1,7 +1,8 @@
 'use strict';
 
 const controller = require('../../lib/controller'),
-      assert     = require('unit.js');
+      assert     = require('unit.js'),
+      cpf        = require('node-cpf');
 
 const commands = [
     ['generate'],
@@ -13,24 +14,14 @@ const commands = [
 
 describe('Controller', function()
 {
-    commands.forEach(function(command)
+    it('Generate UnMasked', function(done)
     {
-        it('Handle Success: [' + command + ']', function(done)
+        console.info = function(output)
         {
-            console.info = function() {};
+            assert.bool(cpf.validate(output)).isTrue();
+            assert.bool(cpf.isMaked(output)).isFalse();
+        };
 
-            controller.handle({
-                options : {},
-                commands: commands,
-                input   : commands,
-            });
-
-            done();
-        });
-    });
-
-    it('Command Default', function(done)
-    {
         controller.handle({
             options : {},
             commands: [],
@@ -40,22 +31,52 @@ describe('Controller', function()
         done();
     });
 
-    it('Command Not Found', function(done)
+    it('Generate Masked', function(done)
     {
-        try {
-            const commands = ['invalid'];
-            controller.handle({
-                options : {},
-                commands: commands,
-                input   : commands,
-            });
-        } catch (e) {
-            assert
-                .object(e)
-                .hasProperty('code', 'NOT_FOUND')
-                .hasProperty('message', 'Comando não encontrado')
-            ;
-            done();
-        }
+        console.info = function(output)
+        {
+            assert.bool(cpf.validate(output)).isTrue();
+            assert.bool(cpf.isMaked(output)).isTrue();
+        };
+
+        controller.handle({
+            options : {m: true},
+            commands: [],
+            input   : commands,
+        });
+
+        done();
+    });
+
+    it('Validate UnMasked', function(done)
+    {
+        var input = '29351086712';
+        console.info = function(output) {
+            assert.string(output).isEqualTo(input + ': VALID');
+        };
+
+        controller.handle({
+            options : {},
+            commands: [input],
+            input   : commands,
+        });
+
+        done();
+    });
+
+    it('Validate Masked', function(done)
+    {
+        var input = '293.510.867-12';
+        console.info = function(output) {
+            assert.string(output).isEqualTo(input + ': VALID');
+        };
+
+        controller.handle({
+            options : {},
+            commands: [input],
+            input   : commands,
+        });
+
+        done();
     });
 });
