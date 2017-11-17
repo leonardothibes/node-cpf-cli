@@ -1,7 +1,5 @@
 # CPF-CLI [![npm](http://img.shields.io/npm/v/node-cpf-cli.svg)](https://www.npmjs.com/package/node-cpf-cli) ![Downloads](https://img.shields.io/npm/dm/node-cpf-cli.svg) [![Build Status](https://secure.travis-ci.org/leonardothibes/node-cpf-cli.png)](http://travis-ci.org/leonardothibes/node-cpf-cli) [![Package Quality](http://npm.packagequality.com/shield/node-cpf-cli.svg)](http://packagequality.com/#?package=node-cpf-cli) [![License](https://img.shields.io/npm/l/node-cpf-cli.svg)](LICENSE)
 
-EM DESENVOLVIMENTO. NÃO HÁ NADA FUNCIONAL AQUI, VOLTE OUTRO DIA.
-
 Gerador e validador de CPF via linha de comando.
 
 Installation
