@@ -15,13 +15,13 @@ Examples
 * [Validate](#validate)
     * [Um sem mascara](#um-sem-mascara)
     * [Um com mascara](#um-com-mascara)
-    * [Múltiplos sem mascara](#múltiplos-sem-mascara)
-    * [Múltiplos com mascara](#múltiplos-com-mascara)
+    * [Multiplos sem mascara](#multiplos-sem-mascara)
+    * [Multiplos com mascara](#multiplos-com-mascara)
 * [Generate](#generate)
     * [Gerando um sem mascara](#gerando-um-sem-mascara)
     * [Gerando um com mascara](#gerando-um-com-mascara)
-    * [Gerando múltiplos sem mascara](#gerando-múltiplos-sem-mascara)
-    * [Gerando múltiplos com mascara](#gerando-múltiplos-com-mascara)
+    * [Gerando multiplos sem mascara](#gerando-multiplos-sem-mascara)
+    * [Gerando multiplos com mascara](#gerando-multiplos-com-mascara)
 
 Validate
 --------
@@ -52,7 +52,7 @@ A saída do comando será:
 777.147.746-14: VALID
 ```
 
-### Múltiplos sem mascara
+### Multiplos sem mascara
 
 ```bash
 cpf 77714774614 72453169882 91760423831 123
@@ -67,7 +67,7 @@ A saída do comando será:
 123: INVALID
 ```
 
-### Múltiplos com mascara
+### Multiplos com mascara
 
 ```bash
 cpf 777.147.746.14 724.531.698-82 917.604.238-31
@@ -110,7 +110,7 @@ A saída do comando será:
 777.147.746-14
 ```
 
-### Gerando múltiplos sem mascara
+### Gerando multiplos sem mascara
 
 ```bash
 cpf -q 3
@@ -124,7 +124,7 @@ A saída do comando será:
 16482357008
 ```
 
-### Gerando múltiplos com mascara
+### Gerando multiplos com mascara
 
 ```bash
 cpf -q 3 -m
