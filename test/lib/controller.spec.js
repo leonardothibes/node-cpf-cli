@@ -6,6 +6,22 @@ const controller = require('../../lib/controller'),
 
 describe('Controller', function()
 {
+    it('Help Command', function(done)
+    {
+        console.info = function(output)
+        {
+            assert.string(output).isNotEmpty()
+        };
+
+        controller.handle({
+            options : {h: true},
+            commands: [],
+            input   : [],
+        });
+
+        done();
+    });
+
     it('Generate UnMasked', function(done)
     {
         console.info = function(output)
