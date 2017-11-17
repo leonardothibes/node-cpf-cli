@@ -10,7 +10,7 @@ describe('Controller', function()
     {
         console.info = function(output)
         {
-            assert.string(output).isNotEmpty()
+            assert.string(output).isNotEmpty();
         };
 
         controller.handle({
