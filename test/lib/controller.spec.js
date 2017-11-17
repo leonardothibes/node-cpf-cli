@@ -4,14 +4,6 @@ const controller = require('../../lib/controller'),
       assert     = require('unit.js'),
       cpf        = require('node-cpf');
 
-const commands = [
-    ['generate'],
-    ['generate', '-m'],
-    ['generate', '--mask'],
-    ['validate', '15736318768'],
-    ['validate', '157.363.187-68'],
-];
-
 describe('Controller', function()
 {
     it('Generate UnMasked', function(done)
@@ -25,7 +17,7 @@ describe('Controller', function()
         controller.handle({
             options : {},
             commands: [],
-            input   : commands,
+            input   : [],
         });
 
         done();
@@ -42,7 +34,7 @@ describe('Controller', function()
         controller.handle({
             options : {m: true},
             commands: [],
-            input   : commands,
+            input   : [],
         });
 
         done();
@@ -58,7 +50,7 @@ describe('Controller', function()
         controller.handle({
             options : {},
             commands: [input],
-            input   : commands,
+            input   : [],
         });
 
         done();
@@ -74,7 +66,7 @@ describe('Controller', function()
         controller.handle({
             options : {},
             commands: [input],
-            input   : commands,
+            input   : [],
         });
 
         done();
