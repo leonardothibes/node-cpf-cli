@@ -13,22 +13,22 @@ Examples
 --------
 
 * [Validate](#validate)
-    * [Um sem máscara](#um-sem-máscara)
-    * [Um com máscara](#um-com-máscara)
-    * [Múltiplos sem máscara](#múltiplos-sem-máscara)
-    * [Múltiplos com máscara](#múltiplos-com-máscara)
+    * [Um sem mascara](#um-sem-mascara)
+    * [Um com mascara](#um-com-mascara)
+    * [Múltiplos sem mascara](#múltiplos-sem-mascara)
+    * [Múltiplos com mascara](#múltiplos-com-mascara)
 * [Generate](#generate)
-    * [Gerando um sem máscara](#gerando-um-sem-máscara)
-    * [Gerando um com máscara](#gerando-um-com-máscara)
-    * [Gerando múltiplos sem máscara](#gerando-múltiplos-sem-máscara)
-    * [Gerando múltiplos com máscara](#gerando-múltiplos-com-máscara)
+    * [Gerando um sem mascara](#gerando-um-sem-mascara)
+    * [Gerando um com mascara](#gerando-um-com-mascara)
+    * [Gerando múltiplos sem mascara](#gerando-múltiplos-sem-mascara)
+    * [Gerando múltiplos com mascara](#gerando-múltiplos-com-mascara)
 
 Validate
 --------
 
 Valida um ou mais CPFs na entrada do comando.
 
-### Um sem máscara
+### Um sem mascara
 
 ```bash
 cpf 77714774614
@@ -40,7 +40,7 @@ A saída do comando será
 77714774614: VALID
 ```
 
-### Um com máscara
+### Um com mascara
 
 ```bash
 cpf 777.147.746-14
@@ -52,7 +52,7 @@ A saída do comando será:
 777.147.746-14: VALID
 ```
 
-### Múltiplos sem máscara
+### Múltiplos sem mascara
 
 ```bash
 cpf 77714774614 72453169882 91760423831 123
@@ -67,7 +67,7 @@ A saída do comando será:
 123: INVALID
 ```
 
-### Múltiplos com máscara
+### Múltiplos com mascara
 
 ```bash
 cpf 777.147.746.14 724.531.698-82 917.604.238-31
@@ -86,7 +86,7 @@ Generate
 
 Gera um ou mais CPFs válidos.
 
-### Gerando um sem máscara
+### Gerando um sem mascara
 
 ```bash
 cpf
@@ -98,7 +98,7 @@ A saída do comando será:
 77714774614
 ```
 
-### Gerando um com máscara
+### Gerando um com mascara
 
 ```bash
 cpf -m
@@ -110,7 +110,7 @@ A saída do comando será:
 777.147.746-14
 ```
 
-### Gerando múltiplos sem máscara
+### Gerando múltiplos sem mascara
 
 ```bash
 cpf -q 3
@@ -124,7 +124,7 @@ A saída do comando será:
 16482357008
 ```
 
-### Gerando múltiplos com máscara
+### Gerando múltiplos com mascara
 
 ```bash
 cpf -q 3 -m
