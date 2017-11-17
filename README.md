@@ -15,32 +15,129 @@ Examples
 --------
 
 * [Validate](#validate)
+    * [Um sem máscara](#um-sem-máscara)
+    * [Um com máscara](#um-com-máscara)
+    * [Múltiplos sem máscara](#múltiplos-sem-máscara)
+    * [Múltiplos com máscara](#múltiplos-com-máscara)
 * [Generate](#generate)
+    * [Gerando um sem máscara](#gerando-um-sem-máscara)
+    * [Gerando um com máscara](#gerando-um-com-máscara)
+    * [Gerando múltiplos sem máscara](#gerando-múltiplos-sem-máscara)
+    * [Gerando múltiplos com máscara](#gerando-múltiplos-com-máscara)
 
 Validate
 --------
 
+Valida um ou mais CPFs na entrada do comando.
+
+### Um sem máscara
+
 ```bash
-cpf validate 77714774614
+cpf 77714774614
 ```
 
-or 
+A saída do comando será
 
 ```bash
-cpf validate 777.147.746-14
+77714774614: VALID
+```
+
+### Um com máscara
+
+```bash
+cpf 777.147.746-14
+```
+
+A saída do comando será:
+
+```bash
+777.147.746-14: VALID
+```
+
+### Múltiplos sem máscara
+
+```bash
+cpf 77714774614 72453169882 91760423831 123
+```
+
+A saída do comando será:
+
+```bash
+77714774614: VALID
+72453169882: VALID
+91760423831: VALID
+123: INVALID
+```
+
+### Múltiplos com máscara
+
+```bash
+cpf 777.147.746.14 724.531.698-82 917.604.238-31
+```
+
+A saída do comando será:
+
+```bash
+777.147.746.14: VALID
+724.531.698-82: VALID
+917.604.238-31: VALID
 ```
 
 Generate
 --------
 
+Gera um ou mais CPFs válidos.
+
+### Gerando um sem máscara
+
 ```bash
-cpf generate # returns '77714774614'
+cpf
 ```
 
-or 
+A saída do comando será:
 
 ```bash
-cpf generate -m # returns '777.147.746-14'
+77714774614
+```
+
+### Gerando um com máscara
+
+```bash
+cpf -m
+```
+
+A saída do comando será:
+
+```bash
+777.147.746-14
+```
+
+### Gerando múltiplos sem máscara
+
+```bash
+cpf -q 3
+```
+
+A saída do comando será:
+
+```bash
+72039541616
+19726053480
+16482357008
+```
+
+### Gerando múltiplos com máscara
+
+```bash
+cpf -q 3 -m
+```
+
+A saída do comando será:
+
+```bash
+720.395.416-16
+197.260.534-80
+164.823.570-08
 ```
 
 Test and development
