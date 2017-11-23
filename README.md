@@ -2,6 +2,13 @@
 
 Gerador e validador de CPF via linha de comando.
 
+Pague-me um café
+----------------
+
+Se este componente foi útil para você, ou para algum de seus projetos, por favor ajude a apoiar o meu trabalho clicando no botão abaixo e fazendo uma doação via PayPal:
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=LEYD9Y3VEMPK8&lc=BR&item_name=Leonardo%20Thibes&item_number=node%2dcpf%2dcli&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+
 Installation
 ------------
 
