@@ -1,6 +1,6 @@
 {
   "name": "node-cpf-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gerador e validador de CPF via linha de comando",
   "main": "index.js",
   "homepage": "https://github.com/leonardothibes/node-cpf-cli#readme",
