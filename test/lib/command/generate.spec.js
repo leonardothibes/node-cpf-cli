@@ -11,7 +11,7 @@ describe('Command Generate', function()
         console.info = function(output)
         {
             assert.bool(cpf.validate(output)).isTrue();
-            assert.bool(cpf.isMaked(output)).isFalse();
+            assert.bool(cpf.isMasked(output)).isFalse();
         };
 
         command.execute([], {});
@@ -23,7 +23,7 @@ describe('Command Generate', function()
         console.info = function(output)
         {
             assert.bool(cpf.validate(output)).isTrue();
-            assert.bool(cpf.isMaked(output)).isTrue();
+            assert.bool(cpf.isMasked(output)).isTrue();
         };
 
         command.execute([], {m: true});
@@ -35,7 +35,7 @@ describe('Command Generate', function()
         console.info = function(output)
         {
             assert.bool(cpf.validate(output)).isTrue();
-            assert.bool(cpf.isMaked(output)).isFalse();
+            assert.bool(cpf.isMasked(output)).isFalse();
         };
 
         command.execute([], {q: 3});
@@ -47,7 +47,7 @@ describe('Command Generate', function()
         console.info = function(output)
         {
             assert.bool(cpf.validate(output)).isTrue();
-            assert.bool(cpf.isMaked(output)).isTrue();
+            assert.bool(cpf.isMasked(output)).isTrue();
         };
 
         command.execute([], {q: 3, m: true});

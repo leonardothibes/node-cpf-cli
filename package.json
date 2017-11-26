@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "node-argv": "0.0.7",
-    "node-cpf": "^1.0.15"
+    "node-cpf": "^1.0.18"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",

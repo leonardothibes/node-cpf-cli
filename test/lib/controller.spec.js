@@ -11,7 +11,7 @@ describe('Controller', function()
         console.info = function(output)
         {
             assert.bool(cpf.validate(output)).isTrue();
-            assert.bool(cpf.isMaked(output)).isFalse();
+            assert.bool(cpf.isMasked(output)).isFalse();
         };
 
         controller.handle({
@@ -28,7 +28,7 @@ describe('Controller', function()
         console.info = function(output)
         {
             assert.bool(cpf.validate(output)).isTrue();
-            assert.bool(cpf.isMaked(output)).isTrue();
+            assert.bool(cpf.isMasked(output)).isTrue();
         };
 
         controller.handle({
